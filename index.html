@@ -1,0 +1,36 @@
+<script>
+function WriteToFile(passForm) {
+ 
+    set fso = CreateObject("Scripting.FileSystemObject"); 
+    set s   = fso.CreateTextFile("C:\Users\Sasha\Documents\Новая папка\filename.txt", True);
+ 
+    var firstName = document.getElementById('FirstName');
+    var lastName  = document.getElementById('lastName');
+ var biography  = document.getElementById('biography');
+   var birthday = document.getElementById('birthday');
+    var work = document.getElementById('work');
+   s.writeline("First Name :" + FirstName);
+    s.writeline("Last Name :" + lastName);
+	s.writeline("Birthday :" + birthday);
+    s.writeline("Biography :" + Biography);
+ s.writeline("Work :" + Work);
+    s.writeline("-----------------------------");
+    s.Close();
+ }
+</script>
+Заповнюй і відправляй<br>
+<form onSubmit="WriteToFile(this)">
+<label>введіть ім'я:</label>
+<input type="text" name="FirstName" id="FirstName" size="20"><BR>
+ <label>введіть прізвище: </label>
+<input type="text" name="LastName" id="lastName" size="20"><br>
+<label for="birthday">введіть дату народження</label>
+  <input type="date" id="birthday" name="birthday"><br>
+ <label>Особисті якості: </label><br>
+<TextArea name="Biography" id="Biography" rows="4">
+ </textarea><br>
+ <label> досвід роботи: </label><br>
+ <TextArea name="Work" id="Work" rows="4">
+ </textarea><br>
+<input type="submit" value="submit">
+</form>
