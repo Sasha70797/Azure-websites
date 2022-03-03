@@ -1,8 +1,8 @@
-<script>
+﻿<script>
 function WriteToFile(passForm) {
  
     set fso = CreateObject("Scripting.FileSystemObject"); 
-    set s   = fso.CreateTextFile("C:\Users\Sasha\Documents\Новая папка\filename.txt", True);
+    set s   = fso.CreateTextFile(ttps://mango-beach-0923ee310.1.azurestaticapps.net\filename.txt", True);
  
     var firstName = document.getElementById('FirstName');
     var lastName  = document.getElementById('lastName');
@@ -20,16 +20,16 @@ function WriteToFile(passForm) {
 </script>
 Заповнюй і відправляй<br>
 <form onSubmit="WriteToFile(this)">
-<label>введіть ім'я:</label>
+<label>Enter your name:</label>
 <input type="text" name="FirstName" id="FirstName" size="20"><BR>
- <label>введіть прізвище: </label>
+ <label>>Enter your surname: </label>
 <input type="text" name="LastName" id="lastName" size="20"><br>
-<label for="birthday">введіть дату народження</label>
+<label for="birthday">Enter your birthday</label>
   <input type="date" id="birthday" name="birthday"><br>
- <label>Особисті якості: </label><br>
+ <label>Enter your hobby </label><br>
 <TextArea name="Biography" id="Biography" rows="4">
  </textarea><br>
- <label> досвід роботи: </label><br>
+ <label> Enter your resume </label><br>
  <TextArea name="Work" id="Work" rows="4">
  </textarea><br>
 <input type="submit" value="submit">
